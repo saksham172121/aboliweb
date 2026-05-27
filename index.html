@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aboli Potdar — Marketing Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+<!--
+════════════════════════════════════════════════════════════
+  ABOLI POTDAR — MARKETING PORTFOLIO
+  How to edit this file:
+  1. Open in any text editor (VS Code, Notepad, TextEdit)
+  2. Search for [EDIT: ...] tags — these are your editable zones
+  3. Replace placeholder text inside those tags with your own
+  4. Save and re-upload to your hosting platform
+  ─────────────────────────────────────────────────────────
+  EDITABLE ZONES (search these labels to jump to them):
+  [EDIT: YOUR EMAIL]         → your contact email
+  [EDIT: YOUR LINKEDIN]      → LinkedIn profile URL
+  [EDIT: YOUR CV LINK]       → hosted PDF resume URL
+  [EDIT: TAGLINE]            → homepage headline (options listed)
+  [EDIT: ABOUT TEXT]         → personal bio paragraphs
+  [EDIT: CASE STUDY 1-3]     → work experience sections
+  [EDIT: SKILLS]             → skills list per category
+  [EDIT: CAMPAIGNS]          → speculative campaign cards
+  [EDIT: RESUME SUMMARY]     → one-paragraph career summary
+════════════════════════════════════════════════════════════
+-->
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:      #FAF8F4;
+  --ink:        #1C1917;
+  --mid:        #6B5E52;
+  --accent:     #B86A2E;
+  --accent-lt:  #EFD9C5;
+  --rule:       rgba(28,25,23,0.11);
+  --serif:      'Cormorant Garamond', Georgia, serif;
+  --sans:       'DM Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.78;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ───────────────────────────────────────────── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--cream);
+  border-bottom: 0.5px solid var(--rule);
+  padding: 0 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 62px;
+}
+.logo {
+  font-family: var(--serif); font-size: 19px; font-weight: 500;
+  color: var(--ink); text-decoration: none; letter-spacing: 0.01em;
+}
+.nav-links { display: flex; gap: 34px; list-style: none; }
+.nav-links a {
+  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--mid); text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--ink); }
+
+/* ── HERO ──────────────────────────────────────────── */
+.hero {
+  min-height: 92vh;
+  padding: 130px 60px 100px;
+  border-bottom: 0.5px solid var(--rule);
+  position: relative; display: flex; align-items: center;
+}
+.hero-inner { max-width: 1000px; margin: 0 auto; width: 100%; }
+.eyebrow {
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 30px;
+  display: flex; align-items: center; gap: 14px;
+}
+.eyebrow::after {
+  content: ''; display: inline-block;
+  width: 44px; height: 0.5px; background: var(--accent);
+}
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(58px, 8.5vw, 104px);
+  font-weight: 300; line-height: 1.01; letter-spacing: -0.015em;
+  margin-bottom: 34px;
+}
+h1 em { font-style: italic; color: var(--accent); }
+.hero-sub {
+  font-size: 17px; font-weight: 300; color: var(--mid);
+  max-width: 540px; line-height: 1.8; margin-bottom: 52px;
+}
+.cta-link {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink); text-decoration: none;
+  border-bottom: 1px solid var(--ink); padding-bottom: 2px;
+  transition: gap 0.25s;
+}
+.cta-link:hover { gap: 18px; }
+.scroll-indicator {
+  position: absolute; bottom: 48px; right: 60px;
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--mid); writing-mode: vertical-rl;
+  display: flex; align-items: center; gap: 10px;
+}
+.scroll-indicator::before {
+  content: ''; display: block;
+  width: 0.5px; height: 44px; background: var(--mid);
+}
+
+/* ── GENERAL SECTION ───────────────────────────────── */
+.section { padding: 112px 60px; max-width: 1060px; margin: 0 auto; }
+.section-full { padding: 112px 60px; }
+
+.label {
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 22px;
+  display: flex; align-items: center; gap: 12px;
+}
+.label::before {
+  content: ''; display: inline-block;
+  width: 26px; height: 0.5px; background: var(--accent);
+}
+h2 {
+  font-family: var(--serif);
+  font-size: clamp(34px, 5.2vw, 60px);
+  font-weight: 300; line-height: 1.08; letter-spacing: -0.01em;
+  margin-bottom: 36px;
+}
+h2 em { font-style: italic; }
+h3 {
+  font-family: var(--serif); font-size: 25px;
+  font-weight: 400; line-height: 1.25; margin-bottom: 14px;
+}
+hr.rule { border: none; border-top: 0.5px solid var(--rule); margin: 0; }
+p.lead { font-size: 16px; color: var(--mid); line-height: 1.85; margin-bottom: 22px; }
+
+/* ── ABOUT ─────────────────────────────────────────── */
+.about-grid {
+  display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 96px;
+}
+.aside { border-left: 1px solid var(--rule); padding-left: 48px; }
+.stat { margin-bottom: 36px; }
+.stat-n {
+  font-family: var(--serif); font-size: 54px; font-weight: 300;
+  color: var(--accent); line-height: 1;
+}
+.stat-d { font-size: 13px; color: var(--mid); margin-top: 5px; line-height: 1.6; }
+.pull {
+  border-top: 1px solid var(--rule); padding-top: 34px; margin-top: 34px;
+}
+.pull-q {
+  font-family: var(--serif); font-size: 23px; font-weight: 300;
+  font-style: italic; line-height: 1.5; color: var(--ink); margin-bottom: 14px;
+}
+.pull-attr {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid);
+}
+
+/* ── BRAND BAND ────────────────────────────────────── */
+.brand-band {
+  background: var(--ink); color: var(--cream);
+  padding: 112px 60px;
+}
+.brand-inner { max-width: 1060px; margin: 0 auto; }
+.brand-band .label { color: #C8844A; }
+.brand-band .label::before { background: #C8844A; }
+.brand-big {
+  font-family: var(--serif);
+  font-size: clamp(27px, 4vw, 54px);
+  font-weight: 300; line-height: 1.26; letter-spacing: -0.01em;
+  margin-bottom: 52px;
+}
+.brand-big em { font-style: italic; color: #C8844A; }
+.pillars {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 48px;
+  border-top: 0.5px solid rgba(255,255,255,0.1); padding-top: 48px;
+}
+.pillar-l {
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: #C8844A; margin-bottom: 10px;
+}
+.pillar-t { font-size: 14px; color: rgba(250,248,244,0.58); line-height: 1.78; }
+
+/* ── CASE STUDIES ──────────────────────────────────── */
+.cs {
+  border-top: 0.5px solid var(--rule); padding: 68px 0;
+  display: grid; grid-template-columns: 210px 1fr; gap: 68px;
+}
+.cs-meta { padding-top: 2px; }
+.cs-n {
+  font-family: var(--serif); font-size: 68px; font-weight: 300;
+  color: var(--rule); line-height: 1; margin-bottom: 22px;
+}
+.cs-tag {
+  display: inline-block;
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent); border: 0.5px solid var(--accent);
+  padding: 4px 11px; border-radius: 2px; margin-bottom: 10px;
+}
+.cs-role { font-size: 12px; color: var(--mid); line-height: 1.6; }
+.cs-body p { color: var(--mid); font-size: 15px; line-height: 1.87; margin-bottom: 18px; }
+.chips { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.chip {
+  background: var(--accent-lt); border-radius: 2px;
+  padding: 11px 17px; font-size: 13px; color: var(--ink); line-height: 1.4;
+}
+.chip strong {
+  display: block; font-family: var(--serif); font-size: 23px;
+  font-weight: 400; color: var(--accent); line-height: 1; margin-bottom: 3px;
+}
+
+/* ── CAMPAIGNS ─────────────────────────────────────── */
+.camp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 44px; }
+.camp-card { border: 0.5px solid var(--rule); border-radius: 4px; overflow: hidden; }
+.camp-hd { padding: 30px 30px 20px; border-bottom: 0.5px solid var(--rule); }
+.camp-type {
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 9px;
+}
+.camp-title { font-family: var(--serif); font-size: 20px; font-weight: 400; line-height: 1.3; }
+.camp-body { padding: 24px 30px; }
+.camp-body p { font-size: 13px; color: var(--mid); line-height: 1.75; margin-bottom: 14px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.tags span {
+  font-size: 11px; color: var(--mid);
+  border: 0.5px solid var(--rule); padding: 3px 11px; border-radius: 100px;
+}
+
+/* ── SKILLS ────────────────────────────────────────── */
+.skills-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 1px; background: var(--rule); border: 0.5px solid var(--rule);
+}
+.skill-cell { background: var(--cream); padding: 34px 30px; }
+.skill-area {
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 14px;
+}
+.skill-list { list-style: none; }
+.skill-list li {
+  font-size: 14px; color: var(--mid); padding: 6px 0;
+  border-bottom: 0.5px solid var(--rule);
+  display: flex; align-items: center; gap: 10px;
+}
+.skill-list li:last-child { border-bottom: none; }
+.skill-list li::before {
+  content: ''; width: 4px; height: 4px; border-radius: 50%;
+  background: var(--accent); flex-shrink: 0;
+}
+
+/* ── RESUME BAND ───────────────────────────────────── */
+.resume-band { background: #F2EDE7; padding: 112px 60px; }
+.resume-inner { max-width: 1060px; margin: 0 auto; }
+.resume-sum {
+  font-family: var(--serif); font-size: 23px; font-weight: 300;
+  line-height: 1.62; color: var(--ink); max-width: 780px; margin-bottom: 72px;
+}
+.resume-sum em { font-style: italic; color: var(--accent); }
+.exp { display: grid; grid-template-columns: 175px 1fr; gap: 48px; padding: 34px 0; border-top: 0.5px solid var(--rule); }
+.exp-date { font-size: 12px; color: var(--mid); padding-top: 4px; }
+.exp-co { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 5px; }
+.exp-title { font-family: var(--serif); font-size: 21px; margin-bottom: 13px; }
+.exp-bul { list-style: none; }
+.exp-bul li { font-size: 14px; color: var(--mid); line-height: 1.8; display: flex; gap: 13px; margin-bottom: 9px; }
+.exp-bul li::before { content: '—'; color: var(--accent); flex-shrink: 0; }
+
+/* ── LINKEDIN ───────────────────────────────────────── */
+.li-card {
+  background: white; border: 0.5px solid var(--rule); border-radius: 8px;
+  overflow: hidden; max-width: 720px; margin: 34px auto 0;
+}
+.li-banner { background: var(--ink); padding: 30px 40px 46px; position: relative; }
+.li-avatar {
+  width: 78px; height: 78px; border-radius: 50%;
+  background: var(--accent-lt); border: 4px solid white;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 26px; color: var(--accent);
+  position: absolute; bottom: -39px; left: 40px;
+}
+.li-body { padding: 52px 40px 40px; }
+.li-name { font-family: var(--serif); font-size: 23px; margin-bottom: 5px; }
+.li-headline { font-size: 14px; color: var(--mid); margin-bottom: 22px; }
+.li-text { font-size: 14px; line-height: 1.82; color: var(--ink); }
+.li-text p { margin-bottom: 16px; }
+
+/* ── TAGLINES ───────────────────────────────────────── */
+.taglines { list-style: none; margin-top: 34px; }
+.taglines li {
+  font-family: var(--serif); font-size: 28px; font-weight: 300; font-style: italic;
+  padding: 26px 0; border-bottom: 0.5px solid var(--rule);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.taglines li span {
+  font-family: var(--sans); font-size: 11px; font-style: normal;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid);
+  white-space: nowrap; margin-left: 20px;
+}
+
+/* ── VISUAL DIRECTION ──────────────────────────────── */
+.palette { display: flex; gap: 10px; margin: 26px 0; }
+.sw {
+  flex: 1; height: 50px; border-radius: 3px;
+  display: flex; align-items: flex-end; padding: 7px 10px;
+  font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.type-box { border: 0.5px solid var(--rule); border-radius: 4px; padding: 26px 30px; margin-bottom: 14px; }
+.type-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+
+/* ── PLATFORM GRID ──────────────────────────────────── */
+.plat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 44px; }
+.plat-card { border: 0.5px solid var(--rule); border-radius: 4px; padding: 26px 22px; }
+.plat-name { font-family: var(--serif); font-size: 20px; margin-bottom: 6px; }
+.plat-fit { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+.plat-note { font-size: 13px; color: var(--mid); line-height: 1.7; }
+
+/* ── TIPS ───────────────────────────────────────────── */
+.tip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 44px; }
+.tip { border: 0.5px solid var(--rule); border-radius: 4px; padding: 30px 26px; }
+.tip-n { font-family: var(--serif); font-size: 38px; font-weight: 300; color: var(--accent-lt); line-height: 1; margin-bottom: 12px; }
+.tip-h { font-weight: 500; font-size: 15px; margin-bottom: 8px; }
+.tip-t { font-size: 13px; color: var(--mid); line-height: 1.75; }
+
+/* ── FOOTER ─────────────────────────────────────────── */
+footer {
+  background: var(--ink); color: var(--cream);
+  padding: 96px 60px; text-align: center;
+}
+.footer-inner { max-width: 1060px; margin: 0 auto; }
+.footer-big {
+  font-family: var(--serif); font-size: clamp(42px, 7vw, 86px);
+  font-weight: 300; line-height: 1.04; margin-bottom: 32px;
+}
+.footer-big em { font-style: italic; color: #C8844A; }
+.footer-sub { color: rgba(250,248,244,0.48); font-size: 17px; max-width: 480px; margin: 0 auto 34px; line-height: 1.8; }
+.footer-email {
+  display: inline-block; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(250,248,244,0.52); border-bottom: 0.5px solid rgba(250,248,244,0.22);
+  padding-bottom: 3px; text-decoration: none; margin-bottom: 52px; transition: color 0.2s;
+}
+.footer-email:hover { color: var(--cream); }
+.footer-nav { display: flex; justify-content: center; gap: 34px; margin-bottom: 52px; }
+.footer-nav a {
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(250,248,244,0.36); text-decoration: none; transition: color 0.2s;
+}
+.footer-nav a:hover { color: rgba(250,248,244,0.75); }
+.footer-copy {
+  border-top: 0.5px solid rgba(255,255,255,0.07); padding-top: 32px;
+  font-size: 11px; color: rgba(250,248,244,0.24); letter-spacing: 0.08em;
+}
+
+/* ── COPY BUTTON ──────────────────────────────────── */
+.copy-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent); border: 0.5px solid var(--accent);
+  padding: 7px 16px; border-radius: 2px; cursor: pointer;
+  background: none; transition: background 0.2s; margin-top: 20px;
+  font-family: var(--sans);
+}
+.copy-btn:hover { background: var(--accent-lt); }
+
+/* ── RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 800px) {
+  nav { padding: 0 22px; }
+  .nav-links { gap: 18px; }
+  .hero, .section, .section-full, .brand-band, .resume-band, footer { padding-left: 22px; padding-right: 22px; }
+  h1 { font-size: 46px; }
+  .about-grid, .camp-grid, .skills-grid, .plat-grid, .tip-grid { grid-template-columns: 1fr; }
+  .cs { grid-template-columns: 1fr; gap: 28px; }
+  .pillars { grid-template-columns: 1fr; gap: 28px; }
+  .exp { grid-template-columns: 1fr; gap: 8px; }
+  .taglines li { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .scroll-indicator { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     NAV
+     [EDIT: YOUR NAME] — change "Aboli Potdar" if needed
+     ═══════════════════════════════════════════════════ -->
+<nav>
+  <a class="logo" href="#">Aboli Potdar</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#resume">Résumé</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════
+     HERO
+     [EDIT: TAGLINE] — swap the headline below.
+     Six options are listed in the "Tagline Choices"
+     section further down this file.
+     ═══════════════════════════════════════════════════ -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Marketing &amp; Communications · Sydney, Australia</div>
+    <h1>From <em>one student's</em><br>ambition to a<br>career in <em>brand.</em></h1>
+    <p class="hero-sub">
+      I'm Aboli — a Master of Commerce graduate from the University of Sydney, scholarship recipient, and marketing professional who has spent three years turning complex ideas into communications that move people to act.
+    </p>
+    <a class="cta-link" href="#work">View my work →</a>
+  </div>
+  <div class="scroll-indicator">Scroll</div>
+</div>
+
+<hr class="rule">
+
+
+<!-- ═══════════════════════════════════════════════════
+     ABOUT
+     [EDIT: ABOUT TEXT] — edit the four paragraphs below.
+     Keep the structure: origin → Sydney moment → work →
+     where you want to go next.
+     ═══════════════════════════════════════════════════ -->
+<div class="section" id="about">
+  <div class="label">Who I am</div>
+  <div class="about-grid">
+
+    <div>
+      <h2>A strategist built<br>on <em>lived</em> insight.</h2>
+
+      <p class="lead">
+        I grew up in India with a clear ambition: to study marketing on a global scale and understand how businesses operate across different markets. That meant completing a Bachelor's in International Business Administration — and then spending an entire year navigating one of the most competitive, complex scholarship processes I've ever encountered, in order to earn a fully funded government scholarship to the University of Sydney.
+      </p>
+      <p class="lead">
+        That year of preparation — disciplined, uncertain, and completely self-directed — shaped how I work. I don't wait for things to become easy. I find the path and stay on it.
+      </p>
+      <p class="lead">
+        I moved to Sydney in February 2023 and rejoined Global Reach at the head office, reporting directly to the Principal Head of ANZ and the Managing Director. In that role, I've worked on B2B marketing strategy, FAM Tour coordination across Australia, student retention campaigns, OVHC revenue diversification, and scholarship promotion. The scope has been broad — and I've been grateful for every part of it.
+      </p>
+      <p class="lead">
+        <!-- [EDIT: ABOUT TEXT] Add or replace this paragraph with where you want to go next -->
+        What I'm looking for now is a role where marketing is treated as a creative discipline — a media company, a publishing brand, a fashion house, an entertainment platform, or a creative agency — somewhere that takes both strategy and storytelling seriously, and where my experience working across global markets, multilingual audiences, and complex B2B relationships becomes an asset from day one.
+      </p>
+    </div>
+
+    <div class="aside">
+      <div class="stat">
+        <div class="stat-n">3+</div>
+        <div class="stat-d">Years in marketing coordination, campaign management, and stakeholder communications across India and Australia</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">800</div>
+        <div class="stat-d">Students placed overseas annually through Global Reach — the network and pipeline I've been actively supporting and marketing to</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">4</div>
+        <div class="stat-d">Markets represented — India, Nepal, Bhutan, Bangladesh — the student source base I've developed deep understanding of</div>
+      </div>
+      <div class="pull">
+        <!-- [EDIT: PULL QUOTE] — swap this for a quote from a referee, your own words, or remove entirely -->
+        <p class="pull-q">"I didn't just study marketing from a textbook. I was the student these campaigns were designed for — which is why I could build them better."</p>
+        <p class="pull-attr">— Aboli Potdar</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<hr class="rule">
+
+
+<!-- ═══════════════════════════════════════════════════
+     BRAND STATEMENT
+     [EDIT: BRAND STATEMENT] — the three pillars can be
+     renamed and rewritten to match how you want to be
+     positioned for specific roles.
+     ═══════════════════════════════════════════════════ -->
+<div class="brand-band">
+  <div class="brand-inner">
+    <div class="label">Personal brand statement</div>
+    <p class="brand-big">
+      I understand markets from the inside out — having been an international student, having marketed to international students, and having built the campaigns, relationships, and revenue streams that kept that pipeline moving. <em>That's not a background detail. That's a strategic advantage.</em>
+    </p>
+    <div class="pillars">
+      <div>
+        <div class="pillar-l">Strategic insight</div>
+        <p class="pillar-t">I think in audiences first, channels second. My ideas come from genuine understanding of what motivates people — whether that's a student weighing study destinations or a recruiter opening a portfolio.</p>
+      </div>
+      <div>
+        <div class="pillar-l">Relationship-led execution</div>
+        <p class="pillar-t">I've managed stakeholder relationships at every level — from school principals in Pune to managing directors in Sydney. Good execution is built on trust, and trust is built through consistent, considered communication.</p>
+      </div>
+      <div>
+        <div class="pillar-l">Initiative under pressure</div>
+        <p class="pillar-t">The OVHC initiative wasn't assigned to me — I identified the opportunity, proposed it, and helped lead it. I don't wait for the brief to arrive. I write the brief when necessary.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     WORK — CASE STUDIES
+     [EDIT: CASE STUDY 1/2/3] — rewrite as your career
+     evolves. Keep the format: problem → process → outcome.
+     ═══════════════════════════════════════════════════ -->
+<div class="section" id="work">
+  <div class="label">Selected work</div>
+  <h2>Three projects.<br><em>Real stakes.</em></h2>
+  <div style="max-width:640px;margin-bottom:60px">
+    <p class="lead">These case studies follow the format I'd use in a client presentation: what the situation was, what I did, and what changed as a result. No inflated language. No invented metrics.</p>
+  </div>
+
+
+  <!-- ── CASE STUDY 1 ───────────────────────────────── -->
+  <!-- [EDIT: CASE STUDY 1] -->
+  <div class="cs">
+    <div class="cs-meta">
+      <div class="cs-n">01</div>
+      <div class="cs-tag">Revenue Initiative</div><br>
+      <div class="cs-role">Marketing Coordinator<br>Global Reach Sydney · 2024</div>
+    </div>
+    <div class="cs-body">
+      <h3>Identifying and launching an OVHC revenue stream during a difficult visa environment.</h3>
+      <p>
+        2024 was a challenging year for the international education sector. Changes in Australian immigration laws led to increased visa rejections and declining enrolments — and Global Reach needed to respond. During a team strategy session, I raised the idea of expanding into Overseas Visitor Health Cover (OVHC) — a product adjacent to our existing OSHC offering, targeting students who had completed their studies and were transitioning to post-study visas.
+      </p>
+      <p>
+        My manager and Managing Director backed the proposal and asked me to help lead it. I coordinated new contracts with insurance partners, developed campaign strategies to reach our existing onshore student database, and mapped out the promotional channels we'd use. The project required commercial thinking, not just marketing execution — I had to understand the revenue model, the compliance angle, and the communication challenge simultaneously.
+      </p>
+      <p>
+        The initiative successfully added a new service line to the business, diversifying revenue at a time when the core business was under pressure. It also deepened my understanding of B2B partnership management, stakeholder negotiation, and the intersection of policy, product, and communication.
+      </p>
+      <div class="chips">
+        <div class="chip"><strong>New</strong>revenue stream launched</div>
+        <div class="chip"><strong>B2B</strong>insurance partner contracts negotiated</div>
+        <div class="chip"><strong>Led</strong>end-to-end campaign strategy</div>
+        <div class="chip"><strong>Identified</strong>opportunity within existing database</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── CASE STUDY 2 ───────────────────────────────── -->
+  <!-- [EDIT: CASE STUDY 2] -->
+  <div class="cs">
+    <div class="cs-meta">
+      <div class="cs-n">02</div>
+      <div class="cs-tag">Event Strategy</div><br>
+      <div class="cs-role">FAM Tour Coordinator<br>Global Reach Sydney · 2022–Present</div>
+    </div>
+    <div class="cs-body">
+      <h3>Coordinating the annual FAM Tour — a flagship stakeholder experience across Australian universities.</h3>
+      <p>
+        Global Reach's annual Familiarisation Tour (FAM Tour) is one of its most strategically important activities. Selected employees travel to partner universities across Australia to build first-hand knowledge of campuses, facilities, and academic culture — and to strengthen the relationships that underpin Global Reach's university partnerships and commissions.
+      </p>
+      <p>
+        Together with my manager, Ms. Minakshi Basak, I coordinate the full lifecycle of this event: communicating with universities about participant profiles, preparing employee briefings, managing accommodation and travel logistics, scheduling sessions, and overseeing on-the-day time management. I also brief universities on what training and presentations to prepare for the visiting team.
+      </p>
+      <p>
+        I've been actively involved in this initiative for three consecutive years. It's taught me that events at this level are fundamentally relationship-management exercises — and that the real outcome isn't the tour itself, but the trust it generates with partners who could enrol hundreds of students through our pipeline.
+      </p>
+      <div class="chips">
+        <div class="chip"><strong>3</strong>consecutive years coordinating</div>
+        <div class="chip"><strong>Multi-site</strong>logistics across Australia</div>
+        <div class="chip"><strong>Senior</strong>stakeholder relationship management</div>
+        <div class="chip"><strong>University</strong>partner briefings prepared</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── CASE STUDY 3 ───────────────────────────────── -->
+  <!-- [EDIT: CASE STUDY 3] -->
+  <div class="cs">
+    <div class="cs-meta">
+      <div class="cs-n">03</div>
+      <div class="cs-tag">Outreach Marketing</div><br>
+      <div class="cs-role">Outreach Marketing Coordinator<br>Global Reach Pune · 2021–2022</div>
+    </div>
+    <div class="cs-body">
+      <h3>Marketing study abroad to students who look exactly like I did two years earlier.</h3>
+      <p>
+        My first professional role at Global Reach in Pune wasn't a coincidence — it made perfect sense. I had just spent a year pursuing an overseas scholarship myself, which meant I understood the fears, the motivations, and the information gaps that every prospective international student faces. I wasn't selling an abstract product. I was describing a path I had personally walked.
+      </p>
+      <p>
+        I visited schools and colleges, conducted group seminars, and worked one-on-one with students and families who were considering studying overseas. My ability to speak from personal experience — not just from a company brochure — built an immediate kind of trust that conventional marketing rarely achieves. I wasn't a salesperson. I was a proof of concept.
+      </p>
+      <p>
+        This role taught me something I carry into every marketing project: the most powerful communication is the kind that makes the audience feel understood, not targeted. That insight shapes how I write copy, how I plan campaigns, and how I think about brand.
+      </p>
+      <div class="chips">
+        <div class="chip"><strong>Live</strong>seminars at schools &amp; colleges</div>
+        <div class="chip"><strong>Authentic</strong>peer-to-peer trust building</div>
+        <div class="chip"><strong>Consultative</strong>student &amp; family engagement</div>
+        <div class="chip"><strong>First</strong>marketing role — natural from day one</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<hr class="rule">
+
+
+<!-- ═══════════════════════════════════════════════════
+     CAMPAIGN CONCEPTS
+     [EDIT: CAMPAIGNS] — these are speculative / self-
+     directed projects. Replace with real ones as you
+     build them. Keep 3–4 max.
+     ═══════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="label">Campaign concepts</div>
+  <h2>How I think<br>before the <em>brief arrives.</em></h2>
+  <p class="lead" style="max-width:580px">
+    These are speculative campaign concepts — self-initiated briefs that show how I approach audience, insight, channel, and message. The kind of thinking I'd walk into a first interview ready to discuss.
+  </p>
+
+  <div class="camp-grid">
+
+    <!-- [EDIT: CAMPAIGN 1] -->
+    <div class="camp-card">
+      <div class="camp-hd">
+        <div class="camp-type">Streaming / Entertainment</div>
+        <div class="camp-title">First Listen — a Spotify campaign for Australia's migrant communities</div>
+      </div>
+      <div class="camp-body">
+        <p>A personalised campaign targeting international students and migrants in Australia. "Your soundtrack to home, wherever home is now." Wrapped-style data storytelling meets emotional precision — shareable story cards, curated discovery playlists, emotional language that earns loyalty that a discount never could.</p>
+        <p><strong style="color:var(--ink);font-size:13px">The insight:</strong> Music is how people hold onto identity across distance. A platform that acknowledges this becomes more than a service.</p>
+        <div class="tags"><span>Spotify</span><span>Personalisation</span><span>Multicultural audience</span><span>Social</span></div>
+      </div>
+    </div>
+
+    <!-- [EDIT: CAMPAIGN 2] -->
+    <div class="camp-card">
+      <div class="camp-hd">
+        <div class="camp-type">Publishing / Media</div>
+        <div class="camp-title">Arrive Differently — editorial content series for an international student platform</div>
+      </div>
+      <div class="camp-body">
+        <p>A narrative content series documenting the first 90 days of life in a new country — not the highlight reel, the real reel. Built for platforms like The Sydney Morning Herald, Broadsheet, or a university media channel. First-person, city-specific, emotionally honest.</p>
+        <p><strong style="color:var(--ink);font-size:13px">The insight:</strong> International students are a massive underserved editorial audience. Their experiences are compelling, shareable, and almost entirely untold by mainstream media.</p>
+        <div class="tags"><span>Editorial</span><span>Long-form</span><span>Community</span><span>Instagram</span></div>
+      </div>
+    </div>
+
+    <!-- [EDIT: CAMPAIGN 3] -->
+    <div class="camp-card">
+      <div class="camp-hd">
+        <div class="camp-type">Fashion / Lifestyle</div>
+        <div class="camp-title">Off The Rack — short-form content for Vogue Australia's Gen Z reader</div>
+      </div>
+      <div class="camp-body">
+        <p>A TikTok and Reels series following real Australian women getting dressed for real days. Anti-aspirational fashion content that earns trust by being specific rather than glossy. Identity over product. The pull: Gen Z will share a video that feels like them before they'll share one that sells to them.</p>
+        <p><strong style="color:var(--ink);font-size:13px">The insight:</strong> Fashion media's biggest opportunity isn't the catwalk — it's the person deciding what to wear at 7am.</p>
+        <div class="tags"><span>TikTok</span><span>Instagram Reels</span><span>Gen Z</span><span>Editorial</span></div>
+      </div>
+    </div>
+
+    <!-- [EDIT: CAMPAIGN 4] -->
+    <div class="camp-card">
+      <div class="camp-hd">
+        <div class="camp-type">B2B / Agency</div>
+        <div class="camp-title">The Brief Is A Feeling — credentials deck rewrite for a mid-size creative agency</div>
+      </div>
+      <div class="camp-body">
+        <p>A complete repositioning of how a creative agency presents itself to new business prospects. Out: "we deliver integrated solutions." In: here's a problem we fell in love with, here's how we solved it. Applied to website copy, pitch deck, LinkedIn strategy, and new-business email sequences.</p>
+        <p><strong style="color:var(--ink);font-size:13px">The insight:</strong> B2B buyers hire agencies they trust. Trust comes from honesty about craft — not from buzzwords about capability.</p>
+        <div class="tags"><span>Brand strategy</span><span>Copywriting</span><span>B2B</span><span>Agency</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<hr class="rule">
+
+
+<!-- ═══════════════════════════════════════════════════
+     SKILLS
+     [EDIT: SKILLS] — update each list as your skills
+     grow. Add tools you've genuinely used.
+     ═══════════════════════════════════════════════════ -->
+<div class="section" id="skills">
+  <div class="label">Capabilities</div>
+  <h2>What I bring<br>to the <em>table.</em></h2>
+  <div class="skills-grid">
+    <div class="skill-cell">
+      <div class="skill-area">Marketing & Campaigns</div>
+      <ul class="skill-list">
+        <li>B2B &amp; B2C campaign coordination</li>
+        <li>Marketing communications strategy</li>
+        <li>Email / EDM campaign management</li>
+        <li>Social media content planning</li>
+        <li>Scholarship &amp; product promotion</li>
+        <li>Brand voice development</li>
+      </ul>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-area">Stakeholders & Projects</div>
+      <ul class="skill-list">
+        <li>Senior stakeholder management</li>
+        <li>Event &amp; tour coordination</li>
+        <li>University &amp; B2B partner relations</li>
+        <li>Cross-functional team collaboration</li>
+        <li>Briefing, scheduling &amp; reporting</li>
+        <li>Workflow &amp; process documentation</li>
+      </ul>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-area">Communications</div>
+      <ul class="skill-list">
+        <li>Copywriting &amp; content editing</li>
+        <li>Audience-tailored messaging</li>
+        <li>Cross-cultural communication</li>
+        <li>Student outreach &amp; seminar delivery</li>
+        <li>Internal &amp; external comms</li>
+        <li>Customer retention strategy</li>
+      </ul>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-area">Tools & Platforms</div>
+      <!-- [EDIT: SKILLS — TOOLS] Add or remove tools based on what you've actually used -->
+      <ul class="skill-list">
+        <li>Microsoft Office Suite</li>
+        <li>Canva / visual design basics</li>
+        <li>Mailchimp / EDM platforms</li>
+        <li>LinkedIn &amp; Meta (organic)</li>
+        <li>CRM basics</li>
+        <li>Notion / project management tools</li>
+      </ul>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-area">Languages & Markets</div>
+      <ul class="skill-list">
+        <!-- [EDIT: SKILLS — LANGUAGES] Update with your actual languages -->
+        <li>English (professional fluency)</li>
+        <li>Hindi (native)</li>
+        <li>Marathi (native)</li>
+        <li>India, Nepal, Bhutan, Bangladesh market knowledge</li>
+        <li>Australian higher education sector</li>
+      </ul>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-area">Education</div>
+      <ul class="skill-list">
+        <li>Master of Commerce — Marketing, Strategy, Innovation &amp; Management</li>
+        <li>University of Sydney</li>
+        <li>Fully funded government scholarship</li>
+        <li>Bachelor of International Business Administration</li>
+        <!-- [EDIT: SKILLS — EDUCATION] Add your undergraduate institution name -->
+        <li>Undergraduate institution — India</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr class="rule">
+
+
+<!-- ═══════════════════════════════════════════════════
+     RÉSUMÉ BAND
+     [EDIT: RESUME SUMMARY] — update the one-paragraph
+     summary as your career goals sharpen.
+     ═══════════════════════════════════════════════════ -->
+<div class="resume-band" id="resume">
+  <div class="resume-inner">
+    <div class="label" style="color:var(--accent)">Résumé snapshot</div>
+
+    <!-- [EDIT: RESUME SUMMARY] -->
+    <p class="resume-sum">
+      Master of Commerce graduate (University of Sydney, scholarship recipient) with three years' experience across <em>B2B marketing coordination, stakeholder management, campaign development, and student engagement</em> in the international education sector. Known for identifying opportunities before they're briefed, managing complex stakeholder relationships across cultures, and communicating complex ideas with clarity and confidence. Seeking early-career roles in media, publishing, fashion, entertainment, or creative agencies in Australia.
+    </p>
+
+    <div class="exp">
+      <div class="exp-date">Mar 2023 — Present</div>
+      <div>
+        <div class="exp-co">Global Reach — Sydney Head Office</div>
+        <div class="exp-title">Marketing Coordinator, ANZ</div>
+        <ul class="exp-bul">
+          <li>Reported directly to Principal Head of ANZ and Managing Director; operated at head-office level from first month</li>
+          <li>Identified and led the launch of a new OVHC revenue stream during the 2024 visa environment downturn — negotiated insurance partner contracts, developed campaign strategy, and executed across the existing student database</li>
+          <li>Coordinated the annual FAM Tour for three consecutive years: university briefings, employee preparation, full travel logistics, and schedule management across multiple Australian campuses</li>
+          <li>Managed scholarship research and social media campaign planning to drive student awareness of available funding opportunities</li>
+          <li>Maintained and developed student retention EDM campaigns targeting the onshore database; promoted additional services including accommodation, insurance, and further study pathways</li>
+          <li>Built and sustained B2B marketing relationships with university partners across all of Australia</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp">
+      <div class="exp-date">2021 — Feb 2023</div>
+      <div>
+        <div class="exp-co">Global Reach — Pune Office, India</div>
+        <div class="exp-title">Outreach Marketing Coordinator</div>
+        <ul class="exp-bul">
+          <li>Visited schools and colleges across Pune to conduct overseas education seminars and inspire prospective international students</li>
+          <li>Leveraged personal experience as a scholarship applicant to communicate authentically with students and families — building trust that formal marketing rarely achieves</li>
+          <li>Developed deep understanding of student motivations, anxieties, and decision-making processes in the international education market</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp">
+      <div class="exp-date">Graduated 2022</div>
+      <div>
+        <div class="exp-co">University of Sydney</div>
+        <div class="exp-title">Master of Commerce — Marketing, Strategy, Innovation &amp; Management</div>
+        <ul class="exp-bul">
+          <li>Fully funded government scholarship — awarded following a year-long competitive selection process</li>
+          <li>Majors: Marketing · Strategy · Innovation · Management</li>
+          <li>Developed expertise in consumer behaviour, integrated marketing communications, digital marketing, brand management, and international business strategy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp">
+      <div class="exp-date"><!-- [EDIT: UNDERGRAD DATES] --></div>
+      <div>
+        <!-- [EDIT: UNDERGRAD INSTITUTION] — add your bachelor's institution name -->
+        <div class="exp-co">Institution name — India</div>
+        <div class="exp-title">Bachelor of International Business Administration</div>
+        <ul class="exp-bul">
+          <li>Foundation in global marketing, international business operations, and cross-market strategy</li>
+          <li>Motivated from the outset by a goal of pursuing postgraduate education overseas</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     LINKEDIN BIO
+     [EDIT: LINKEDIN BIO] — paste this directly into
+     your LinkedIn "About" section. Update the email.
+     ═══════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="label">LinkedIn</div>
+  <h2>Your profile,<br><em>written right.</em></h2>
+  <p class="lead" style="max-width:580px">Copy the bio below directly into your LinkedIn About section. It's written to perform in search, feel human in a feed, and position you for creative and media roles.</p>
+
+  <div class="li-card" id="li-text">
+    <div class="li-banner">
+      <div class="li-avatar">AP</div>
+    </div>
+    <div class="li-body">
+      <div class="li-name">Aboli Potdar</div>
+      <!-- [EDIT: LINKEDIN HEADLINE] -->
+      <div class="li-headline">Marketing Coordinator · Campaign Strategy &amp; Communications · University of Sydney · Sydney · Open to roles in media, publishing &amp; creative agencies</div>
+      <div class="li-text">
+        <p>I came to Australia on a fully funded government scholarship to study marketing at the University of Sydney. Before I arrived, I spent a year working as an outreach coordinator for one of India's leading overseas education companies — visiting schools, running seminars, and helping students navigate the same decision I was making myself. I wasn't selling a product. I was describing a path I was walking.</p>
+        <p>That experience — being both the marketer and the audience — is the lens I bring to everything I do.</p>
+        <p>Over the past three years at Global Reach's Sydney head office, I've worked on B2B marketing strategy, stakeholder management, and campaign coordination at a level that goes well beyond a coordinator title. I've reported directly to the Principal Head of ANZ and our Managing Director. I've led an initiative that opened a new insurance revenue stream during the 2024 visa environment downturn. I've coordinated our flagship FAM Tour across Australian universities for three consecutive years.</p>
+        <p>Now I'm looking for a role where marketing is treated as a creative discipline. I'm drawn to media, publishing, fashion, entertainment, and creative agencies — places where the audience is taken seriously, the brand has a genuine point of view, and the work is held to a high standard.</p>
+        <!-- [EDIT: LINKEDIN BIO — YOUR EMAIL] -->
+        <p style="color:var(--mid);font-size:13px">📍 Sydney, Australia · University of Sydney · Global Reach · <a href="mailto:[EDIT: YOUR EMAIL]" style="color:var(--accent)">[EDIT: YOUR EMAIL]</a></p>
+      </div>
+    </div>
+  </div>
+  <button class="copy-btn" onclick="
+    const t = document.getElementById('li-text').innerText;
+    navigator.clipboard.writeText(t).then(()=>{ this.textContent = 'Copied to clipboard'; });
+  ">Copy LinkedIn bio</button>
+</div>
+
+<hr class="rule">
+
+
+<!-- ═══════════════════════════════════════════════════
+     TAGLINE OPTIONS
+     [EDIT: TAGLINE] — pick one and use it in the hero.
+     ═══════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="label">Headline options</div>
+  <h2>Your portfolio<br><em>tagline</em> — pick one.</h2>
+  <p class="lead" style="max-width:560px">Six options, each with a different angle. Choose the one that feels most honest — and most aligned to the company you're applying to.</p>
+
+  <ul class="taglines">
+    <li>From one student's ambition to a career in brand. <span>Origin story · emotional</span></li>
+    <li>I was the audience before I became the marketer. <span>Unique POV · memorable</span></li>
+    <li>Coordinator by instinct. Strategist by necessity. <span>Dual-strength · confident</span></li>
+    <li>Built to bridge — cultures, teams, campaigns. <span>Global angle · collaborative</span></li>
+    <li>The thinking behind the campaign. <span>Process-led · editorial</span></li>
+    <li>Curious. Precise. Always shows up. <span>Three-word · direct</span></li>
+  </ul>
+</div>
+
+<hr class="rule">
+
+
+<!-- ═══════════════════════════════════════════════════
+     VISUAL DIRECTION
+     (Reference only — no editing needed)
+     ═══════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="label">Visual direction</div>
+  <h2>How the portfolio<br>should <em>look.</em></h2>
+  <p class="lead" style="max-width:600px;margin-bottom:34px">This palette and typography codes you as editorial and premium — The Saturday Paper meets Aesop meets a junior creative agency portfolio. Warm. Considered. Not trying too hard.</p>
+
+  <div style="margin-bottom:12px;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid)">Colour palette</div>
+  <div class="palette">
+    <div class="sw" style="background:#1C1917;color:rgba(250,248,244,0.45)">Ink</div>
+    <div class="sw" style="background:#FAF8F4;border:0.5px solid #ddd;color:#aaa">Cream</div>
+    <div class="sw" style="background:#B86A2E;color:rgba(250,248,244,0.85)">Amber</div>
+    <div class="sw" style="background:#EFD9C5;color:#8a5020">Dust</div>
+    <div class="sw" style="background:#6B5E52;color:rgba(250,248,244,0.7)">Mid</div>
+    <div class="sw" style="background:#F2EDE7;border:0.5px solid #ddd;color:#999">Sand</div>
+  </div>
+
+  <div style="margin:30px 0 12px;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid)">Typography</div>
+  <div class="type-box">
+    <div class="type-label">Display / Headlines — Cormorant Garamond Light</div>
+    <p style="font-family:var(--serif);font-size:34px;font-weight:300;line-height:1.1">Editorial. Warm. Intelligent. Use Light (300) for all headlines and pull quotes. Free on Google Fonts.</p>
+  </div>
+  <div class="type-box">
+    <div class="type-label">Body / UI / Labels — DM Sans Regular</div>
+    <p style="font-size:15px;line-height:1.82;color:var(--mid)">Clean, modern, and never distracting. Use Regular (400) for body copy and Medium (500) for labels and small caps. Free on Google Fonts. Never use bold in body text — it breaks the editorial feel.</p>
+  </div>
+
+  <div style="margin:30px 0 12px;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid)">Photography &amp; imagery direction</div>
+  <p class="lead" style="max-width:680px">
+    Avoid stock photography wherever possible. Use your own photos — Sydney locations, candid moments, places you've worked or visited on FAM Tours. If you need placeholder imagery, look for editorial-style photography with natural light, neutral tones, and real environments. Avoid corporate headshots; opt for a natural, well-lit portrait. If you commission a headshot, ask the photographer for a "journalist portrait" rather than a "LinkedIn photo" — the brief will produce a completely different result.
+  </p>
+</div>
+
+<hr class="rule">
+
+
+<!-- ═══════════════════════════════════════════════════
+     PLATFORM RECOMMENDATIONS
+     (Reference only — no editing needed)
+     ═══════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="label">Where to build it</div>
+  <h2>Platform<br><em>recommendations.</em></h2>
+
+  <div class="plat-grid">
+    <div class="plat-card">
+      <div class="plat-name">Framer</div>
+      <div class="plat-fit">Best for agency &amp; fashion roles</div>
+      <div class="plat-note">Best-in-class output — looks genuinely premium and will stand out immediately. Slight learning curve, but the result speaks for itself. Strong signal for design-literate environments.</div>
+    </div>
+    <div class="plat-card">
+      <div class="plat-name">Notion</div>
+      <div class="plat-fit">Best for media &amp; publishing</div>
+      <div class="plat-note">Unexpected and editorial when done with care. Signals that you think in systems and document clearly — both qualities that media and publishing companies look for. Free and fast to build.</div>
+    </div>
+    <div class="plat-card">
+      <div class="plat-name">Squarespace</div>
+      <div class="plat-fit">Best all-rounder</div>
+      <div class="plat-note">Beautiful templates, reliable performance, easy custom domain. The safe premium choice — great if you want something live and professional quickly. Cheltenham or Beatrice templates work well with this palette.</div>
+    </div>
+    <div class="plat-card">
+      <div class="plat-name">Adobe Portfolio</div>
+      <div class="plat-fit">Best for visual work</div>
+      <div class="plat-note">Free with Creative Cloud. Clean and professional. Strongest if you have campaign visuals, mood boards, or photography to fill it with — the platform rewards visual content.</div>
+    </div>
+    <div class="plat-card">
+      <div class="plat-name">Wix</div>
+      <div class="plat-fit">Flexible, accessible</div>
+      <div class="plat-note">More customisable than Squarespace but requires more manual taste to look great. Good for fast turnaround. Avoid the generic templates — choose minimal and build up from there.</div>
+    </div>
+    <div class="plat-card">
+      <div class="plat-name">Canva Websites</div>
+      <div class="plat-fit">Interim only</div>
+      <div class="plat-note">Fastest to launch and a reasonable placeholder. Not recommended for agency, fashion, or publishing applications where design sensibility is being read before the first interview.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="rule">
+
+
+<!-- ═══════════════════════════════════════════════════
+     STANDING OUT TIPS
+     (Reference only — keep or remove)
+     ═══════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="label">Standing out</div>
+  <h2>How to get the call<br>from <em>Vogue, Dentsu,<br>or News Corp.</em></h2>
+  <div class="tip-grid">
+    <div class="tip">
+      <div class="tip-n">01</div>
+      <div class="tip-h">Your origin story is a strategic asset — not a personal detail.</div>
+      <div class="tip-t">Moving from India to Sydney on a fully funded scholarship, after a year of preparation, while working in your field, is not a background detail. It is proof of discipline, resilience, cross-cultural intelligence, and self-direction. Frame it that way, and it becomes one of the most compelling things in your application.</div>
+    </div>
+    <div class="tip">
+      <div class="tip-n">02</div>
+      <div class="tip-h">The OVHC initiative is your strongest story — use it everywhere.</div>
+      <div class="tip-t">You identified a revenue opportunity, proposed it to a Managing Director, negotiated contracts, and led the campaign. That is a senior initiative for a coordinator-level role. Make sure every version of your portfolio and resume tells that story clearly. It demonstrates commercial thinking, not just marketing execution.</div>
+    </div>
+    <div class="tip">
+      <div class="tip-n">03</div>
+      <div class="tip-h">Show speculative work to prove you think beyond your job description.</div>
+      <div class="tip-t">The four campaign concepts in this portfolio aren't padding — they're evidence. They show that you're consuming culture, thinking about brands, and developing ideas on your own time. For media and fashion roles, that kind of self-direction is exactly what separates shortlisted candidates from the rest.</div>
+    </div>
+    <div class="tip">
+      <div class="tip-n">04</div>
+      <div class="tip-h">Reference specific work from every company you apply to.</div>
+      <div class="tip-t">In cover letters and interviews, mention a specific Vogue Australia cover, a Dentsu campaign, a Spotify initiative, or a recent News Corp editorial direction. It signals that you're not sending a templated application — you're writing to them, specifically. One well-researched reference is worth more than three generic paragraphs about "passion for media."</div>
+    </div>
+    <div class="tip">
+      <div class="tip-n">05</div>
+      <div class="tip-h">Add a "What I'm reading / watching / noticing" section as you grow.</div>
+      <div class="tip-t">A short, rotating section of brands, campaigns, or cultural moments you find interesting signals cultural literacy without you having to claim it. Keep it specific and honest — "I've been following how The Guardian Australia is building its membership model" is more compelling than "I'm passionate about digital media."</div>
+    </div>
+    <div class="tip">
+      <div class="tip-n">06</div>
+      <div class="tip-h">The FAM Tour coordination is an underrated proof point — pitch it as event strategy.</div>
+      <div class="tip-t">Three years of coordinating a multi-site, senior-stakeholder event that directly impacts B2B university revenue? That's event strategy, relationship management, and operational execution at once. When applying to agencies or media companies, reframe it as stakeholder experience design — because that's exactly what it is.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     CONTACT / FOOTER
+     [EDIT: YOUR EMAIL], [EDIT: YOUR LINKEDIN],
+     [EDIT: YOUR CV LINK]
+     ═══════════════════════════════════════════════════ -->
+<footer id="contact">
+  <div class="footer-inner">
+    <p class="footer-big">Ready when<br>you <em>are.</em></p>
+    <p class="footer-sub">Whether it's a full-time role, an internship, a freelance brief, or a conversation about the industry — I'm genuinely interested. Reach out.</p>
+    <!-- [EDIT: YOUR EMAIL] -->
+    <a href="mailto:[EDIT: YOUR EMAIL]" class="footer-email">[EDIT: YOUR EMAIL]</a>
+    <div class="footer-nav">
+      <!-- [EDIT: YOUR LINKEDIN] -->
+      <a href="[EDIT: YOUR LINKEDIN]" target="_blank" rel="noopener">LinkedIn</a>
+      <!-- [EDIT: YOUR CV LINK] — host your CV as a PDF on Google Drive or Dropbox and paste the link here -->
+      <a href="[EDIT: YOUR CV LINK]" target="_blank" rel="noopener">Download CV</a>
+      <a href="#">Sydney, AU</a>
+    </div>
+    <div class="footer-copy">© 2025 Aboli Potdar · Marketing &amp; Communications Portfolio · Sydney, Australia</div>
+  </div>
+</footer>
+
+</body>
+</html>
